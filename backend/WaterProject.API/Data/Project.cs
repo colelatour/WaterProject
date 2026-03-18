@@ -1,0 +1,21 @@
+namespace WaterProject.API.Data;
+using System.ComponentModel.DataAnnotations;
+
+public class Project
+{
+    [Key]
+    public int ProjectId { get; set; }
+    
+    [Required]
+    public string ProjectName { get; set; }
+    
+    public string? ProjectType { get; set; }
+    
+    public string? ProjectRegionalProgram { get; set; }
+    
+    public string? ProjectImpact{ get; set; }
+    
+    public string? ProjectPhase { get; set; }
+    
+    public string? ProjectFunctionalityStatus { get; set; }
+}
