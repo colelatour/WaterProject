@@ -4,6 +4,7 @@ using WaterProject.API.Data;
 
 namespace WaterProject.API.Controllers
 {
+<<<<<<< HEAD
     [Route("[controller]")]
     [ApiController]
     public class WaterController : ControllerBase
@@ -48,6 +49,30 @@ namespace WaterProject.API.Controllers
 
             return Ok(projectTypes);
         }
+=======
+    private WaterDbContext _waterContext;
+    
+    public WaterController(WaterDbContext temp) => _waterContext = temp;
+
+    [HttpGet("AllProjects")]
+    public IActionResult GetProjects(int pageSize = 10, int pageNum = 1)
+    {
+        var something = _waterContext.Projects
+        .Skip((pageNum-1) * pageSize)
+        .Take(pageSize)
+        .ToList();
+
+        var totalNumProjects = _waterContext.Projects.Count();
+
+        var someObject = new
+        {
+            Projects = something,
+            TotalNumProjects = totalNumProjects
+        };
+        
+        return Ok(someObject);
+    }
+>>>>>>> 9e83f4895841bf7aa2b0ce93e6c063a20e05ee68
 
     }
 }
