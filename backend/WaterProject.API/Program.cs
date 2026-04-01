@@ -11,7 +11,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("frontend", policy =>
     {
         policy
-            .WithOrigins("http://localhost:3000")
+            .WithOrigins("http://localhost:3000",
+                "https://thankful-mud-0cd80ed1e.7.azurestaticapps.net")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
