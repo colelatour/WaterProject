@@ -13,12 +13,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
     "bootstrap": "^5.3.8",
-    "dom": "^0.0.3",
-=======
-    "bootstrap": "^5.3.3",
->>>>>>> 9e83f4895841bf7aa2b0ce93e6c063a20e05ee68
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router": "^7.13.2"

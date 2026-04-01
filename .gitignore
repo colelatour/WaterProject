@@ -1,0 +1,14 @@
+# .NET build artifacts
+**/bin/
+**/obj/
+
+# User-specific files
+.vs/
+*.user
+*.suo
+
+# Node
+**/node_modules/
+
+# OS
+.DS_Store
