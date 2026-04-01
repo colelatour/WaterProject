@@ -12,7 +12,7 @@ function ProjectList() {
   useEffect(() => {
     const fetchProjects = async () => {
       const response = await fetch(
-        `https://localhost:5000/Water/AllProjects?pageSize=${pageSize}&pageNum=${pageNum}`
+        `https://waterproject-latour-backend-ekbghtbqffbaeagr.francecentral-01.azurewebsites.net/Water/AllProjects?pageSize=${pageSize}&pageNum=${pageNum}`
       );
       const data = await response.json();
       setProjects(data.projects);
